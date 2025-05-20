@@ -1,7 +1,7 @@
 import { COLORS } from "@/constant/theme";
 import { styles } from "@/styles/auth.style";
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Image, Text, TouchableOpacity, View } from "react-native";
 
 export default function login() {
   return (
@@ -29,6 +29,17 @@ export default function login() {
           style={styles.illustration}
           resizeMode="cover"
         />
+      </View>
+      {/* LOGIN SECTION */}
+      <View style={styles.loginSection}>
+        <TouchableOpacity style={styles.googleButton}>
+          <View>
+            <Text style={styles.googleButtonText}>Login</Text>
+          </View>
+        </TouchableOpacity>
+        <Text style={styles.termsText}>
+          By continuing, you agree to our terms and conditions.
+        </Text>
       </View>
     </View>
   );
